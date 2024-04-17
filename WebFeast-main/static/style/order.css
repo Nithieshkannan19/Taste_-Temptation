@@ -1,0 +1,39 @@
+.menu-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-list a:hover{
+    color: white;
+    background-color: rgb(174, 181, 65);
+}
+
+.menu-list{
+    background-color: beige;
+}
+
+#dish{
+    border-radius: 12px;
+    height: 180px;
+    margin-left: 20px;
+    background-color: rgb(187, 247, 187);
+    width: 30%;
+    border: 0px;
+}
+
+#ordertable,th,tr,td{
+    border: 1px solid black;
+}
+
+button:hover {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+  }
+  
+  button:active {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  }
+  
+  button:focus {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  }
+  

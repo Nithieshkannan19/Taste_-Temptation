@@ -1,0 +1,19 @@
+body{
+    background:url(/static/img/adminbg1.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h1,h3{
+    color: darkgreen;
+}
+
+#sales1,#hallbooking1,#payment1,tr,td,th{
+    border: 1px solid darkgreen;
+}
+
+.admin_nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: darkgreen;
+}

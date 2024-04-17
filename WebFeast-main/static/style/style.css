@@ -1,0 +1,184 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    background-color: white;
+    color: black;
+}
+
+.header i{
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+}
+
+.header img{
+    margin-left: 32%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f1e8e8;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.logo{
+    text-align: center;
+}
+
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo a:hover{
+    color: white;
+    background-color: rgb(114, 119, 124);
+}
+
+.logo a:active{
+    color: rgb(114, 119, 124);
+    background-color: white;
+}
+
+.story-img{
+    float: left;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+.story-para{
+    width: auto;
+    margin-left: 20px;
+    padding-right: 15%;
+}
+
+#contact,#timings,#location{
+    border:1px solid black;
+    border-radius: 12px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+#th{
+    border: 1px double black;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+#table{
+    width:75%;
+    border-spacing: 10px;
+}
+
+#th{
+    width: 45%;
+}
+
+.r1,.r2,.r3,.r4,.r5,.r6{
+    margin: 20px;
+    width:70px;
+    height: 70px;
+    float:left;
+}
+ 
+#footer li{
+    display: inline;
+}
+
+#footer a{
+    text-decoration: none;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, sans-serif;
+}
+
+.mySlides{
+    display: none;
+}
+
+#image{
+    vertical-align: middle;
+    width: 30%;
+    height: 30%;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.active {
+    background-color: #717171;
+  }
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+.content{
+    height: 350px;
+    width: 350px;
+    background-color: #f1e8e8;
+    top: 15%;
+    left: 5%;
+}
+ 
+.rowone{
+    height: 150px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+#th{
+    margin: 20px;
+}
+

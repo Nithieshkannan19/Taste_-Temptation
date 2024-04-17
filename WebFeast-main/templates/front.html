@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Chef Master</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//cdn.domain.com">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">  
+
+       <!-- <script src="{{ url_for('static', filename='script/script.js') }}" type="text/javascript"></script>-->
+    </head>
+    
+    <body>
+        <div id="container">
+            <div class="header">
+                <div class="row">
+                    <div class="col-md-3 text-left">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="/static/img/logo.avif" alt="logo" height="100" width="100" class="mx-auto">
+                    </div>
+                    <div class="col-md-3 text-right">
+                        <i class="fa fa-phone" aria-hidden="true"><span style="font-size:16px">+(123) 456 789</span></i>
+                    </div>
+                </div>
+            </div>  
+            <div class="logo">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="{{url_for('admin')}}">ADMIN</a>
+                    <a href="{{url_for('order')}}">ORDER</a>
+                    <a href="{{url_for('chef')}}">CHEF</a>
+                </div>
+                <span style="font-size:30px;cursor:pointer;padding-left: 10px;" onclick="openNav()">&#9776;</span>&nbsp;&nbsp;
+                <a href="#home">HOME&nbsp;&nbsp;</a>
+                <a href="#about">ABOUT&nbsp;&nbsp;</a>
+                <a href="#reserve">RESERVE HALL&nbsp;&nbsp;</a>
+                <a href="#review">REVIEW&nbsp;&nbsp;</a>
+                <a href="#contact">CONTACT&nbsp;&nbsp;</a>
+            </div>
+            <br>
+            <div id="home">
+                <center>
+                    <div class="slideshow-container">
+                        
+                       <div class="mySlides fade">
+                            <img id="image" src="https://media.istockphoto.com/id/1211547141/photo/modern-restaurant-interior-design.jpg?s=612x612&w=0&k=20&c=CvJmHwNNwfFzVjj1_cX9scwYsl4mnVO8XFPi0LQMTsw=" style="width:50%; height: 50%;">
+                        </div>    
+                        <div class="mySlides fade">
+                            <img id="image" src="https://img.rawpixel.com/private/static/images/website/2022-05/upwk61661577-wikimedia-image-kowapeej.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=494692dea28d0075e11332e41e3cb064" style="width:50%; height: 50%;">
+                        </div>
+                        <div class="mySlides fade">
+                            <img id="image" src="https://cdn.vox-cdn.com/thumbor/5d_RtADj8ncnVqh-afV3mU-XQv0=/0x0:1600x1067/1200x900/filters:focal(672x406:928x662)/cdn.vox-cdn.com/uploads/chorus_image/image/57698831/51951042270_78ea1e8590_h.7.jpg" style="width:50%; height: 50%;">
+                        </div>
+                    </div> 
+                </center>
+            </div>
+            <br>
+            <div id="about">
+                <div class="story">
+                    <h2 style="text-align:center;">Our story</h2><br>
+                    <div class="about-story">
+                        <img  class="story-img" src="/static/img/story.jpg" alt="Story">
+                        <div class="story-para">
+                            <h4><b>It's all started since 1998</b></h4>
+                            <p>We take pride in delivering warm, friendly service and creating mouth-watering culinary delights for all.Using only the freshest locally sourced ingredients, we will ensure you have a dining experience to remember.</p>
+                            <p>Since 1998, we are the perfect place for romantic meal for two, a catch up with friends, family parties, business meetings and bringing loved ones together.With comfortable surroundings, affordable prices.</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <center>
+                        <h2>Our Goals</h2>
+                        <p style="padding-left:15%; padding-right: 15%;">We shall sell delicious and remarkable foods and beverages that meet the highest quality, freshness and seasonality criteria.While combining modern creative and classic cookie traditions.To have every customer who comes through our doors leave impressed by their experience at our restaurant and excited to come back again.</p>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+            <div id="reserve">
+                <h4 style="text-align:center;">RESERVE HALLS</h4>
+                <div class="bg-image" style="position: relative;">
+                    <img src="/static/img/hall.jpg" alt="reserve" style="width: 100%; opacity: 1;" height="500">
+                    <form action="/gobookingTable">
+                        <div class="content" style="position: absolute;border: 1px double rgb(49, 48, 48);">
+                            <center>
+                                <p style="font-size: 15px;margin-top: 10px;color: orange;">Come and Enjoy hospitality with Food</p>
+                                <h5>EVENT CATERING AND BANQUET</h5>
+                                <br>
+                                <p style="color:orange;"><span class="fa fa-clock">&nbsp;</span>24 Hours</p>
+                                <p><span class="fa fa-calendar">&nbsp;</span>365 days</p>
+                                <h5>Giving you the best service</h5><br>
+                                <i style="color:gray;">For Enquiry:<span style="color:blue;">+(91) 422-4522444</span></i>
+                                <br><br>
+                                <button type="submit" style="background-color: rgb(52, 94, 172); color: aliceblue; border-radius: 4px;">Reserve Now</button>
+                            </center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br><br>
+            <div id="review">
+                <h2 style="text-align:center;">Review</h2><br>
+                <center>
+                    <table id="table">
+                        <tr id="tr">
+                            <th id="th">
+                                <img  class="r1" src="/static/img/albert-dera-ILip77SbmOE-unsplash(1).jpg" alt="Story">
+                                <p style="padding-left: 30%;">This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again.</p>
+                            </th>
+                            <th id="th">
+                                <img  class="r2" src="/static/img/jack-finnigan-rriAI0nhcbc-unsplash(1).jpg" alt="Story">
+                                <p style="padding-left: 30%;"> This place is great! Atmosphere is chill and cool but the staff is also really friendly. They know what they’re doing and what they’re talking about, and you can tell making the customers happy is their main priority. Food is pretty good, some italian classics and some twists, and for their prices it’s 100% worth it.</p>
+                            </th>
+                        </tr>
+                        <tr id="tr">
+                            <th id="th">
+                                <img  class="r3" src="/static/img/jake-nackos-IF9TK5Uy-KI-unsplash.jpg" alt="Story">
+                                <p style="padding-left: 30%;">Phenomenal experience. Top notch food, atmosphere, and wait staff. Have been here multiple times, and every time is an amazing experience all around. I always take my out of town guests here, as the food is always superb. Definitely a lifetime customer! </p>
+                            </th>
+                            <th id="th">
+                                <img  class="r4" src="/static/img/jeremy-brady-B7X7R_Q0c-c-unsplash(1).jpg" alt="Story">
+                                <p style="padding-left: 30%;">Amazing experience! If you thought gourmet kitchen will leave you hungry, think again. You should skip several meals before visiting this amazing restaurant. Everything is so tasty, you cannot restraint yourself from having all of the dishes.</p>
+                            </th>
+                        </tr>
+                        <tr id="tr">
+                            <th id="th">
+                                <img  class="r5" src="/static/img/naim-ahmed-8BcVHmAHtlw-unsplash(1).jpg" alt="Story">
+                                <p style="padding-left: 30%;"> Searching for places to eat in the local area and this place popped up. I don’t normally leave reviews but I feel compelled as the food was absolutely exquisite. The (FN) may be the best dessert I’ve ever had! Just annoyed I had to share it. </p>
+                            </th>
+                            <th id="th">
+                                <img  class="r6" src="/static/img/stephanie-liverani-Zz5LQe-VSMY-unsplash(1) (1).jpg" alt="Story">
+                                <p style="padding-left: 30%;">Everything about this restaurant was great. The place was clean and smelled good. The staff and greeter was very nice. Our waiter was awesome, the staff also worked as a team in bringing and cleaning up our food. The food was fresh and awesome. Then we also had dessert and that was really good as well. Great atmosphere with really nice people.</p>
+                            </th>
+                        </tr>
+                    </table>                    
+                </center>
+            </div>
+            <br><br>
+            <center>
+            <div>
+                <input type="text" id="message-input" placeholder="Your review">
+                <button onclick="document.getElementById('message-input').value = 'Your review' ">SUBMIT</button>
+            </div>
+            </center>
+            <br>
+            <div id="contacts">
+                <h4 style="text-align: center;">CONTACT US</h4><br>
+                <center>
+                    <button id="timings">Timings:<br>12am-12pm</button>
+                    <button id="contact">Call now:<br>+(123) 456 789</button> 
+                    <button id="location">Meet us:<br>Psg CT</button>    
+                </center>
+            </div>
+            <br><br>
+            <div id="footer">
+                <center>
+                    <li><a href="/">&#8226;Terms and conditions</a></li>
+                    <li><a href="/">&#8226;Privacy policy</a></li>
+                    <p>Copyright &#169; 1998 Chef Master Pvt Ltd</p>
+                </center> 
+            </div>
+        </div>
+        <script>
+            function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+  
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() { 
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  
+  slides[slideIndex-1].style.display = "block";   
+  setTimeout(showSlides, 2000);
+}
+        </script>
+    </body>
+</html>

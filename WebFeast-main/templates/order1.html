@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style/order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/static/script/order.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <div class="waitername" style="padding: 20px;">
+            <label for="waiters"><b>Waiter Id:</b></label>
+            <select name="waiters" id="waiters">
+                <option value="101">101</option>
+                <option value="102">102</option>
+                <option value="103">103</option>
+                <option value="104">104</option>
+                <option value="105">105</option>
+            </select>
+        </div>
+        <center>
+            <div class="heading">
+                <h2>MENU</h2>
+            </div>
+            <div class="menu-list">
+                <a href="#starters">Starters</a>&nbsp;&nbsp;
+                <a href="#soup">Soup</a>&nbsp;&nbsp;
+                <a href="#parotta">Parotta</a>&nbsp;&nbsp;
+                <a href="#egg">Egg varities</a>&nbsp;&nbsp;
+                <a href="#dosa">Dosa</a>&nbsp;&nbsp;
+                <a href="#briyani">Briyani</a>&nbsp;&nbsp;
+                <a href="#noodles">Noodles</a>&nbsp;&nbsp;
+                <a href="#beverages">Beverages</a>&nbsp;&nbsp;
+            </div>
+        </center>
+        <br>
+        <div id="starters">
+            <h4>STARTERS</h4>
+            <hr color="black" width="100%">
+            <div class="starter-list">
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;"src="/static/img/starter1.jpg" alt="starter1">
+                    <span>Chicken Lollipop</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;12.00</p>
+                </button>
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/starter2.jpg" alt="starter1">
+                    <span>Butter Chicken</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;16.00</p>
+                </button> 
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/starter3.jpg" alt="starter1">
+                    <span>Paneer Tikka</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <br><br><br><p>&#36;9.00</p>
+                </button>    
+            </div>
+        </div>
+        <br>
+        <div id="soup">
+            <h4>SOUP</h4>
+            <hr color="black" width="100%">
+            <div class="soup-list">
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;"src="/static/img/soup1.jpg" alt="soup1">
+                    <span>Chicken Soup</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;8.00</p>
+                </button>
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/soup2.jpg" alt="soup2">
+                    <span>Corn Soup</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;6.00</p>
+                </button> 
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/soup3.jpg" alt="soup3">
+                    <span>Tomato Soup</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;5.50</p>
+                </button>    
+            </div>
+        </div>
+        <br>
+        <div id="parotta">
+            <h4>PAROTTA</h4>
+            <hr color="black" width="100%">
+            <div class="parotta-list">
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;"src="/static/img/parotta.jpeg" alt="">
+                    <span>Kothu Parotta</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;4.50</p>
+                </button>
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/parotta2.jpeg" alt="">
+                    <span>Chilli Parotta</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;4.00</p>
+                </button> 
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/parotta3.jpeg" alt="">
+                    <span>Bun Parotta</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;1.00</p>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div id="egg">
+            <h4>EGG</h4>
+            <hr color="black" width="100%">
+            <div class="egg-list">
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;"src="/static/img/egg2.jpeg" alt="">
+                    <span>Scrambled Egg</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;0.75</p>
+                </button>
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/egg.jfif" alt="">
+                    <span>Half Boil</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;1.25</p>
+                </button> 
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/egg3.jpg" alt="">
+                    <span>Egg Gravy</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;0.75</p>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div id="dosa">
+            <h4>DOSA</h4>
+            <hr color="black" width="100%">
+            <div class="dosa-list">
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;"src="/static/img/dosa2.jpg" alt="">
+                    <span>Masal Dosa</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;1.50</p>
+                </button>
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/dosa.jfif" alt="">
+                    <span>Ghee Roast</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;2.50</p>
+                </button> 
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/dosa3.jpg" alt="">
+                    <span>Paneer Dosa</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;3.00</p>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div id="briyani">
+            <h4>BIRIYANI</h4>
+            <hr color="black" width="100%">
+            <div class="briyani-list">
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;"src="/static/img/biriyani.jpeg" alt="">
+                    <span>Mutton Biriyani</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;9.00</p>
+                </button>
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/biriyani2.jpeg" alt="">
+                    <span>Chicken Biriyani</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;8.00</p>
+                </button> 
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/biriyani3.jpeg" alt="">
+                    <span>Hyderabad Biriyani</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;8.50</p>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div id="noodles">
+            <h4>NOODLES</h4>
+            <hr color="black" width="100%">
+            <div class="noodles-list">
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;"src="/static/img/noodle.jpg" alt="">
+                    <span>Veg Noodles</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;5.25</p>
+                </button>
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/noodles2.jpeg" alt="">
+                    <span>Spl Noodles</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;6.00</p>
+                </button> 
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/noodles3.jpeg" alt="">
+                    <span>Paneer Noodles</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;6.50</p>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div id="beverages">
+            <h4>BEVERAGES</h4>
+            <hr color="black" width="100%">
+            <div class="beverage-list">
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;"src="/static/img/beverage.jpg" alt="">
+                    <span>Mojitto</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;2.25</p>
+                </button>
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/beverage 2.jpg" alt="">
+                    <span>Oreo Shake</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;3.00</p>
+                </button> 
+                <button id="dish">
+                    <img style="height:150px;width:150px;border-radius: 5px; float:left;padding-left: 5px;" src="/static/img/beverage 3.jpg" alt="">
+                    <span>Caramel</span>
+                    <br><span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:darkgreen">&starf;</span>
+                    <span style="color:white">&starf;</span>
+                    <br><br><br><p>&#36;2.75</p>
+                </button>
+            </div>
+        </div>
+        <br><br>
+        <div class="place">
+            <form>
+                <div class="item" style="padding: 20px;">
+                    <label for="items"><b>Item name </b></label>
+                    <select name="items" id="items">
+                        <option value="Select">--Select--</option>
+                        <option value="Chicken Lollipop">Chicken Lollipop</option>
+                        <option value="Butter Chicken">Butter Chicken</option>
+                        <option value="Paneer Tikka">Paneer Tikka</option>
+                        <option value="Chicken Soup">Chicken Soup </option>
+                        <option value="Corn Soup">Corn Soup</option>
+                        <option value="Tomato Soup">Tomato Soup</option>
+                        <option value="Kothu Parotta">Kothu Parotta</option>
+                        <option value="Chilli Parota">Chilli Parota</option>
+                        <option value="Bun Parotta">Bun Parotta</option>
+                        <option value="Scrambled Egg">Scrambled Egg</option>
+                        <option value="Half Boil">Half Boil</option>
+                        <option value="Egg Gravy">Egg Gravy</option>
+                        <option value="Masal Dosa">Masal Dosa</option>
+                        <option value="Ghee Roast">Ghee Roast</option>
+                        <option value="Paneer Dosa">Paneer Dosa</option>
+                        <option value="Mutton Biriyani">Mutton Biriyani </option>
+                        <option value="Chicken Biriyani">Chicken Biriyani</option>
+                        <option value="Hyderabad Biriyani">Hyderabad Biriyani</option>
+                        <option value="Veg Noodles">Veg Noodles </option>
+                        <option value="Spl Noodles">Spl Noodles</option>
+                        <option value="Paneer Noodles">Paneer Noodles</option>
+                        <option value="Mojito">Mojito</option>
+                        <option value="Oreo Shake">Oreo Shake</option>
+                        <option value="Caramel Shake">Caramel Shake</option>
+                </select>&nbsp;
+                <label for="qty"><b>Quantity</b></label>
+                <input type="number"  min="1" id="qty"name="qty" style="width: 50px;height:25px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <!-- <button id="additem" style="width: 50px;height:25px;background-color: rgb(23, 126, 23);color: aliceblue; border: 0px;border-radius: 5px;" onclick="additem()">ADD</button> -->
+                <input type="button" style="width: 50px;height:25px;background-color: rgb(23, 126, 23);color: aliceblue; border: 0px;border-radius: 5px;" onclick="additem();" value="Add">
+                </div>
+                <center><table id="ordertable">
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th id="amount">Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </table></center>
+            </form>
+        </div>
+        <br><br>
+        <center><button class="placeorder" style="background-color: rgb(23, 126, 23);color: aliceblue; border: 0px;border-radius: 5px;" onclick="placeorder()">Place Order</button></center>
+        <b><p id="totalprice" style="text-align: center;">TOTAL AMOUNT :&#36;0</p></b>
+
+    </div><br><br>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiter login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container" style="background-color: lightgreen;width: 350px;height: 350px; border-radius: 5px;;">
+        <form action="/waiterLogin" method="post">
+            <!-- <h4>SIGN IN</h4> -->
+            <center>
+                <div class="login" style="margin-top: 25%;height: 50%;">
+                    <h4 style="padding-top: 70px;">SIGN IN</h4> 
+                    <!-- <img src="/venv/my_Restaurant/members/static/img/logo.avif" alt="logo" height="100" width="100"> -->
+                    <label aria-placeholder="Your name" style="margin-top: 40px;">Username</label>
+                    <input type="text" name = "username" required><br>
+                    <label aria-placeholder="Your password" style="margin-top: 20px;">Password&nbsp;</label>
+                    <input type="password" name = "password" required>
+                    <button type="submit" style="margin-top: 50px; background-color: darkgreen; color: aliceblue; border: 0px; border-radius: 2px;">SIGN IN</button><br>
+                    <p style="color: red;">{{msg}}</p>
+                </div>
+            </center>
+        </form>
+    </div>
+</body>
+</html>

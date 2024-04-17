@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ADMIN</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//cdn.domain.com">
+
+        <script src="{{ url_for('static', filename='script/admin.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <style>
+            body{
+                background-image:url(/static/img/adminbg1.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+            h1,h3{
+                color: darkgreen;
+            }
+
+            #sales1,#hallbooking1,#payment1,tr,td,th{
+                border: 1px solid darkgreen;
+                background-color: rgb(223, 243, 248);
+            }
+            .admin_nav a{
+                text-decoration: none;
+                font-size: 20px;
+                color: darkgreen;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <center><h1>CHEF MASTER</h1></center>
+            <div class="tot-sales">
+                <marquee width="100%" direction="left">
+                    <h3 id="scroll">Total sales</h3>
+                </marquee>
+            </div>
+        
+            <div class="admin_nav" style="text-align: center; background-color: darkgreen;">
+                <nav>
+                    <a href="{{url_for('sales')}}" style="color: aliceblue;">SALES &nbsp;&nbsp;</a>
+                    <a href="#netsales" style="color: aliceblue;">NETSALES &nbsp;&nbsp;</a>
+                    <a href="{{url_for('items')}}" style="color: aliceblue;">ITEMS &nbsp;&nbsp;</a>
+                    <a href="{{url_for('hallbooking') }}" style="color: aliceblue;">HALL BOOKINGS </a>
+                </nav>
+            </div>
+        
+            <div class="back">
+                <a href="{{url_for('back')}}"><i class="fa fa-arrow-left" style="font-size: 40px;"></i></a>
+            </div>
+            <br>
+        
+            <div class="whole" style="background-color: aliceblue; padding: 15px; width: 400px; height: fit-content;opacity: 0.75; margin-left: 40px;">
+                <div id="sales">
+                    <h3>SALES</h3>
+                    <script>
+                        document.getElementById("scroll").innerHTML = "TOTAL SALES &#36;"+localStorage.getItem("totalAmt");
+                    </script>
+                    <form id="add-form">
+                        <input type="date" name="date" autocomplete="off" placeholder="Date" style="height: 30px;width: 120px;padding-bottom:10px;">
+                        <input type="number" name="order_id" autocomplete="off" placeholder="Order num"style="height: 30px;width: 120px;padding-bottom:10px;margin:10px;"><br>
+                        <script>
+                            $(document).ready(function() {
+                                $.get('/get_last_order_id', function(data) {
+                                    var lastOrderID = parseInt(data);
+                                    var nextOrderID = lastOrderID + 1;
+                                    $('input[name="order_id"]').val(nextOrderID);
+                                });
+                            });
+                        </script>
+                        <input type="number" name="amount" autocomplete="off" placeholder="Amount"style="height: 30px;width: 120px;">&nbsp;&nbsp;
+                        <select name="status" id="status"style="height: 30px;width: 120px;">
+                            <option value="Paid"><b>--Status--</b></option>
+                            <option value="Paid">Paid</option>
+                            <option value="Pending">pending</option>
+                        </select>
+                        <br><br>
+                        <button type="submit" onclick="addsales()" style="background-color: darkgreen;color: aliceblue;border: 0px;border-radius: 2px;">Add</button><br><br>
+                    </form>
+                    <table id="sales1">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Order Number</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in data1 %}
+                            <tr>
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                                <td>{{ row[3] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <br>
+                    <input type="button" style="background-color: darkgreen;color: aliceblue; border: 0px;border-radius: 5px;" onclick="add();" value="OK">
+                    <script>
+                        function add(){
+                            document.getElementById("scroll").innerHTML="TOTAL SALES &#36;0";
+                        }
+                    </script>
+                </div>
+                <br><br>
+                <div id="netsales">
+                    <h3>NET SALES</h3>
+                    <form action="/netsales" method="post">
+                        <input type="date" autocomplete="off" name="date" value="Date">
+                        <button type="submit">GET DETAILS</button>
+                        <p style="color: red;">{{msg}}</p>
+                    </form>
+                </div>
+                <br>
+                <div id="items">
+                    <h3>ITEMS</h3>
+                    <form action="/addMenu" method="post">
+                        <input type="text" autocomplete="off" name="itemName" placeholder="Item Name" style="height: 30px;width: 120px;padding-bottom:10px;">
+                        <input type="number" autocomplete="off" name="item_amt" placeholder="Item Amount" style="height: 30px;width: 120px;padding-bottom:10px;"><br><br>
+                        <button type="submit" style="background-color: darkgreen;color: aliceblue;border: 0px;border-radius: 2px;">Add Item</button>
+                    </form>
+                    <br>
+                    <form action="/delMenu" method="post">
+                        <input type="text" autocomplete="off" name="del_itemName" placeholder="Item Name" style="height: 30px;width: 120px;padding-bottom:10px;"><br><br>
+                        <button type="submit" style="background-color: darkgreen;color: aliceblue;border: 0px;border-radius: 2px;">Delete Item</button><br>
+                    </form><br>
+                    <table id="items1">
+                        <thead>
+                            <tr>
+                                <th>Item Name</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in data2 %}
+                            <tr>
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
+                <br><br>
+                <div id="hallbooking">
+                    <h3>HALL BOOKING</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Mobile Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in data %}
+                            <tr>
+                                <td>{{ row[0] }}</td>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[2] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <br><br>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </body>
+</html>

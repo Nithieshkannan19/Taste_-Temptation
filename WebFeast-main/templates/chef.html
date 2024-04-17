@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CHEF</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+        <style>
+            body{
+                background:url(/static/img/chef.jpg) ;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            table,tr,th,td{
+                border: 1px solid black;
+                text-align: center;
+            }
+            .cheftable{
+                margin-left: 60%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <center><h2>ORDERS</h2></center>
+            <div class="back">
+                <a href="{{url_for('back')}}"><i class="fa fa-arrow-left" style="font-size: 40px;"></i></a>
+            </div>
+            <div class="cheftable">
+                <table id="chef_table">
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Order No.</th>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>{{ order[0] }}</td>
+                            <td>{{ order[1] }}</td>
+                            <td>{{ order[2] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody> 
+                </table>
+            </div>
+        </div>
+        <script>
+            // Get all the checkboxes in the table
+            const checkboxes = document.querySelectorAll("#chef_table tbody input[type='checkbox']");
+
+            // Add an event listener to each checkbox
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    // If the checkbox is checked, remove the row from the table
+                    if (checkbox.checked) {
+                        checkbox.parentNode.parentNode.remove();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

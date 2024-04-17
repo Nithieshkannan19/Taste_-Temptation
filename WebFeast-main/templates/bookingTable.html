@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Booking </title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//cdn.domain.com">
+
+        <script src="{{ url_for('static', filename='script/booking.js') }}"></script>
+    </head>
+    <body>
+        <div class="container" style="background-color: lightgreen;width: 350px;height: 350px; border-radius: 5px;;">
+            <form id="bookingTable" method="POST" action="/bookingTable">
+                <center>
+                    <div class="booktable" style="margin-top: 25%;height: 50%;">
+                        <h4 style="padding-top: 70px;">BOOK TABLE</h4> 
+                        <fieldset>
+                            <label aria-placeholder="Enter your Name" style="margin-top: 40px;">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" autocomplete="off" name='R_NAME' required style="width: 150px;"><br>
+                        </fieldset>
+                        <fieldset>
+                            <label aria-placeholder="EventDate" id="Eventdate" style="margin-top: 20px;">Event Date:&nbsp;&nbsp;&nbsp;</label>
+                            <input type="date" autocomplete="off" name = 'R_DATE' required><br>
+                        </fieldset>
+                        <fieldset>
+                            <label aria-placeholder="Mobile Number" style="margin-top: 20px;">Mobile Number:&nbsp;&nbsp;&nbsp;</label>
+                            <input type="tel" autocomplete="off" name = 'MOB_NUM' pattern="[7-9]{1}[0-9]{9}" required><br>
+                        </fieldset>
+                        <fieldset>
+                            <button type="submit" name="submit" style="margin-top: 50px; background-color: darkgreen; color: aliceblue; border: 0px; border-radius: 2px;" onclick="validate()">BOOK NOW</button><br><br>
+                            <p style="color: red;">{{msg}}</p>
+                        </fieldset>     
+                    </div>
+                </center>
+            </form>
+            <div class="back">
+                <a href="{{url_for('back')}}"><i class="fa fa-arrow-left" style="font-size: 40px;"></i></a>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>
